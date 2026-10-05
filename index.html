@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday MY Butterfly 💜</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        color: #fff;
+        background: #050307;
+        overflow-x: hidden;
+      }
+      body:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -3;
+        background:
+          radial-gradient(circle at 15% 15%, #7d24b83d, transparent 28%),
+          radial-gradient(circle at 85% 45%, #a93dff26, transparent 30%),
+          radial-gradient(circle at 50% 100%, #4b0b7040, transparent 35%),
+          #050307;
+      }
+      body:after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+        background-image:
+          linear-gradient(#ffffff05 1px, transparent 1px),
+          linear-gradient(90deg, #ffffff05 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: linear-gradient(to bottom, black, transparent 85%);
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+        padding: 18px 6%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #050307aa;
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid #ffffff0d;
+      }
+      .logo {
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #d69aff;
+      }
+      nav a {
+        color: #d8d0dc;
+        text-decoration: none;
+        margin-left: 24px;
+        font-size: 0.88rem;
+      }
+      nav a:hover {
+        color: #d18aff;
+      }
+      .hero {
+        min-height: 100vh;
+        padding: 110px 7% 70px;
+        display: grid;
+        grid-template-columns: 1fr 1.05fr;
+        gap: 55px;
+        align-items: center;
+      }
+      .hero-copy {
+        max-width: 650px;
+      }
+      .kicker {
+        color: #ca75ff;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        margin-bottom: 18px;
+      }
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(4rem, 8vw, 7.5rem);
+        line-height: 0.9;
+        background: linear-gradient(110deg, #fff, #e2b6ff, #9d42e9, #fff);
+        background-size: 250%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: shine 5s ease infinite;
+      }
+      @keyframes shine {
+        50% {
+          background-position: 100%;
+        }
+      }
+      .hero-copy p {
+        color: #bcb2c4;
+        line-height: 1.9;
+        margin: 28px 0;
+        font-size: 1.02rem;
+      }
+      .btn {
+        border: 0;
+        border-radius: 999px;
+        padding: 14px 25px;
+        color: white;
+        font-weight: 700;
+        background: linear-gradient(135deg, #7020aa, #b84cff);
+        cursor: pointer;
+        box-shadow: 0 0 30px #9b3fe833;
+        transition: 0.3s;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 45px #b44dff55;
+      }
+      .hero-photo {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .hero-photo:before {
+        content: "";
+        position: absolute;
+        width: 5%;
+        height: 0.5%;
+        background: #8e31d83d;
+        filter: blur(80px);
+        border-radius: 50%;
+        top: 15%;
+      }
+      .hero-photo img {
+        width: min(100%, 520px);
+        max-height: 720px;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 28px;
+        border: 1px solid #c77dff35;
+        position: relative;
+        box-shadow:
+          0 30px 100px #000,
+          0 0 60px #9b3fe822;
+      }
+      .badge {
+        position: absolute;
+        bottom: 24px;
+        left: 50px;
+        padding: 13px 18px;
+        border-radius: 18px;
+        background: #100916dd;
+        backdrop-filter: blur(12px);
+        border: 1px solid #d08cff35;
+        color: #dfc3ef;
+        font-size: 0.82rem;
+        z-index: 2;
+      }
+      section {
+        padding: 100px 7%;
+      }
+      .title {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .title span {
+        color: #c46cff;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 0.75rem;
+      }
+      .title h2 {
+        font:
+          700 clamp(2.2rem, 5vw, 3.8rem) "Playfair Display",
+          serif;
+        margin-top: 9px;
+      }
+      .message {
+        max-width: 900px;
+        margin: auto;
+        padding: 50px;
+        border-radius: 30px;
+        text-align: center;
+        background: linear-gradient(145deg, #ffffff08, #8f2dcc0b);
+        border: 1px solid #c77dff24;
+        box-shadow: 0 25px 80px #0008;
+      }
+      .message p {
+        color: #d5cadc;
+        line-height: 2;
+        font-size: 1.03rem;
+      }
+      .signature {
+        font:
+          600 1.5rem "Playfair Display",
+          serif;
+        color: #d18aff;
+        margin-top: 28px;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        border: 1px solid #c77dff25;
+        background: #100b13;
+        box-shadow: 0 20px 70px #0009;
+      }
+      .card img {
+        display: block;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        transition: 0.6s;
+      }
+      .card:hover img {
+        transform: scale(1.035);
+      }
+      .caption {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        padding: 17px 19px;
+        border-radius: 18px;
+        background: #08050bd9;
+        backdrop-filter: blur(14px);
+        border: 1px solid #ffffff12;
+      }
+      .caption b {
+        display: block;
+        color: #f2dcff;
+        margin-bottom: 4px;
+      }
+      .caption span {
+        color: #aa9daf;
+        font-size: 0.82rem;
+      }
+      .cake-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 470px;
+      }
+      .cake-card {
+        max-width: 850px;
+        margin: auto;
+        text-align: center;
+        padding: 15px 15px 45px;
+        border-radius: 32px;
+        background:
+          radial-gradient(circle at 50% 0, #9a39d82b, transparent 45%),
+          #ffffff05;
+        border: 1px solid #c77dff24;
+      }
+      .cake-card p {
+        color: #bdb1c3;
+        margin-bottom: 10px;
+      }
+      .cake {
+        position: relative;
+        width: 290px;
+        height: 220px;
+        margin: 60px auto 20px;
+      }
+      .plate {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 290px;
+        height: 25px;
+        border-radius: 50%;
+        background: linear-gradient(#cfa6e9, #6b348c);
+        box-shadow: 0 0 35px #b84cff33;
+      }
+      .layer {
+        position: absolute;
+        left: 25px;
+        width: 240px;
+        height: 80px;
+        border-radius: 18px 18px 25px 25px;
+        background: linear-gradient(#4a174f, #241126);
+        border: 2px solid #9d55bc;
+      }
+      .layer.top {
+        bottom: 70px;
+        height: 72px;
+        border-radius: 22px 22px 18px 18px;
+      }
+      .layer.bottom {
+        bottom: 25px;
+        height: 70px;
+      }
+      .icing {
+        position: absolute;
+        left: 20px;
+        top: 72px;
+        width: 250px;
+        height: 30px;
+        border-radius: 50%;
+        background: linear-gradient(#d69aff, #7f35a8);
+        box-shadow: 0 5px 0 #5c237b;
+      }
+      .drip {
+        position: absolute;
+        width: 17px;
+        height: 32px;
+        background: #c77bff;
+        border-radius: 0 0 12px 12px;
+        top: 88px;
+      }
+      .d1 {
+        left: 62px;
+      }
+      .d2 {
+        left: 110px;
+        height: 45px;
+      }
+      .d3 {
+        left: 160px;
+        height: 25px;
+      }
+      .d4 {
+        left: 205px;
+        height: 38px;
+      }
+      .candle {
+        position: absolute;
+        bottom: 140px;
+        width: 10px;
+        height: 60px;
+        border-radius: 6px;
+        background: linear-gradient(90deg, #f6d58d, #9f6b25, #f7dc98);
+      }
+      .c1 {
+        left: 78px;
+      }
+      .c2 {
+        left: 108px;
+      }
+      .c3 {
+        left: 138px;
+      }
+      .c4 {
+        left: 168px;
+      }
+      .c5 {
+        left: 198px;
+      }
+      .flame {
+        position: absolute;
+        top: -24px;
+        left: -3px;
+        width: 16px;
+        height: 24px;
+        border-radius: 50% 50% 50% 50%;
+        background: #ffcf5b;
+        box-shadow: 0 0 18px #ffb52d;
+        animation: flicker 0.35s infinite alternate;
+      }
+      @keyframes flicker {
+        to {
+          transform: scale(0.8) translateY(2px);
+          opacity: 0.75;
+        }
+      }
+      .blown .flame {
+        display: none;
+      }
+      .blown .cake {
+        filter: brightness(0.8);
+      }
+      #wish {
+        margin-top: 5px;
+        color: #d9b9e8;
+        min-height: 30px;
+      }
+      footer {
+        text-align: center;
+        padding: 45px 20px;
+        border-top: 1px solid #ffffff0c;
+        color: #756b79;
+      }
+      footer span {
+        color: #c66cff;
+      }
+      .spark {
+        position: fixed;
+        width: 4px;
+        height: 4px;
+        background: #d8a0ff;
+        border-radius: 50%;
+        box-shadow: 0 0 12px #b44cff;
+        z-index: -1;
+        animation: twinkle 3s infinite;
+      }
+      @keyframes twinkle {
+        50% {
+          opacity: 0.2;
+          transform: scale(0.5);
+        }
+      }
+      @media (max-width: 850px) {
+        nav a {
+          display: none;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding-top: 120px;
+        }
+        .hero-copy {
+          margin: auto;
+        }
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+        .card img {
+          height: 200px;
+        }
+        .message {
+          padding: 32px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">LOVE YOU MY BABY GIRL 💜</div>
+      <div>
+        <a href="#home">Home</a><a href="#message">Message</a
+        ><a href="#memories">Memories</a><a href="#cake">Cake</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <div class="kicker">A little birthday blessings ✦</div>
+          <h1>Happy<br />Birthday<br />Baby Girl</h1>
+          <p>
+            Today isn't just another day. It's the day we celebrate one of the
+            most wonderful person in this little universe. Here's to your
+            dreams, your happiness, your beautiful chaos and another
+            unforgettable year. 💜
+          </p>
+          <button class="btn" onclick="celebrate()">
+            Make Birthday Magic ✨
+          </button>
+        </div>
+
+        <div class="hero-photo">
+          <img src="birthday-photo-1.png" alt="Birthday portrait" />
+          <div class="badge">24 looks magical on you ✦</div>
+        </div>
+      </section>
+
+      <section id="message">
+        <div class="title">
+          <span>A message from your bestie</span>
+          <h2>For My Favorite Human</h2>
+        </div>
+        <div class="message">
+          <p>
+            Happy Birthday to my bestie! 💜<br /><br />
+            Thank you for all the laughs, random conversations, unforgettable
+            memories and all the little moments that somehow became my favorite
+            ones. I hope this new chapter gives you more reasons to smile, more
+            adventures to remember and every beautiful thing you deserve.<br /><br />
+            Keep shining, keep dreaming and never forget how special you are.
+            Here's to another year of being completely amazing. ✨
+          </p>
+          <div class="signature">— Your Bestie ( tharu )♡</div>
+        </div>
+      </section>
+
+      <section id="memories">
+        <div class="title">
+          <span>Her birthday era</span>
+          <h2>Two Little Moments ✦</h2>
+        </div>
+        <div class="gallery">
+          <div class="card">
+            <img
+              src="birthday-photo-1.png"
+              alt="Birthday celebration portrait"
+            />
+            <div class="caption">
+              <b>The Birthday Queen 👑</b
+              ><span>24 • purple • beautiful memories</span>
+            </div>
+          </div>
+          <div class="card">
+            <img src="birthday-photo-2.png" alt="Birthday cake portrait" />
+            <div class="caption">
+              <b>Make A Wish ✨</b><span>A little birthday magic for you</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cake">
+        <div class="title">
+          <span>Made specially for you</span>
+          <h2>Your Birthday Cake 🎂</h2>
+        </div>
+        <div class="cake-card">
+          <p>Close your eyes, make a wish, then blow the candles. ✨</p>
+          <div class="cake-wrap">
+            <div class="cake" id="cakeElement">
+              <div class="candle c1"><div class="flame"></div></div>
+              <div class="candle c2"><div class="flame"></div></div>
+              <div class="candle c3"><div class="flame"></div></div>
+              <div class="candle c4"><div class="flame"></div></div>
+              <div class="candle c5"><div class="flame"></div></div>
+              <div class="icing"></div>
+              <div class="drip d1"></div>
+              <div class="drip d2"></div>
+              <div class="drip d3"></div>
+              <div class="drip d4"></div>
+              <div class="layer top"></div>
+              <div class="layer bottom"></div>
+              <div class="plate"></div>
+            </div>
+          </div>
+          <button class="btn" onclick="blowCandles()">
+            Blow The Candles 🕯️
+          </button>
+          <div id="wish"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>Made with <span>💜</span> for the birthday girl • 2026</footer>
+
+    <script>
+      function makeStars() {
+        for (let i = 0; i < 100; i++) {
+          const s = document.createElement("div");
+          s.className = "spark";
+          s.style.left = Math.random() * 100 + "vw";
+          s.style.top = Math.random() * 100 + "vh";
+          s.style.animationDelay = Math.random() * 3 + "s";
+          s.style.opacity = Math.random();
+          document.body.appendChild(s);
+        }
+      }
+      makeStars();
+
+      function celebrate() {
+        for (let i = 0; i < 90; i++) {
+          const c = document.createElement("div");
+          c.style.position = "fixed";
+          c.style.left = Math.random() * 100 + "vw";
+          c.style.top = "-20px";
+          c.style.width = "8px";
+          c.style.height = "14px";
+          c.style.zIndex = "100";
+          c.style.background = `hsl(${260 + Math.random() * 70},90%,70%)`;
+          c.style.borderRadius = "3px";
+          c.style.transform = `rotate(${Math.random() * 360}deg)`;
+          c.animate(
+            [
+              { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+              {
+                transform: `translate(${(Math.random() - 0.5) * 250}px,110vh) rotate(720deg)`,
+                opacity: 0,
+              },
+            ],
+            { duration: 2500 + Math.random() * 2500, easing: "linear" },
+          );
+          document.body.appendChild(c);
+          setTimeout(() => c.remove(), 5200);
+        }
+      }
+
+      function blowCandles() {
+        document.getElementById("cakeElement").classList.add("blown");
+        document.getElementById("wish").innerHTML =
+          "✨ Wish sent to the universe. May this year be your most beautiful one yet. 💜";
+        celebrate();
+      }
+    </script>
+  </body>
+</html>
